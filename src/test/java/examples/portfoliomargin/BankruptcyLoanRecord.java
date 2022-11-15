@@ -15,7 +15,7 @@ public final class BankruptcyLoanRecord {
     public static void main(String[] args) {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createPortfolioMargin().bankruptcyLoanRecord(parameters);
         logger.info(result);
     }

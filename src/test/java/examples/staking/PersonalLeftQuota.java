@@ -17,7 +17,7 @@ public final class PersonalLeftQuota {
         parameters.put("product", "STAKING");
         parameters.put("productId", "Bnb*21*WL");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createStaking().personalLeftQuota(parameters);
         logger.info(result);
     }

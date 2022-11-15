@@ -16,7 +16,7 @@ public final class CalcMaxAdjustAmount {
         parameters.put("loanCoin", "USDT");
         parameters.put("collateralCoin", "BUSD");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createFutures().calcMaxAdjustAmount(parameters);
         logger.info(result);
     }

@@ -32,5 +32,4 @@ public final class ExchangeInfo {
         result = market.exchangeInfo(parameters);
         logger.info(result);
     }
-
 }

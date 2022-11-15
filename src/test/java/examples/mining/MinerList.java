@@ -16,7 +16,7 @@ public final class MinerList {
         parameters.put("algo", "sha256");
         parameters.put("userName", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMining().minerList(parameters);
         logger.info(result);
     }

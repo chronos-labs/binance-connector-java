@@ -14,7 +14,7 @@ public final class IsolatedAccount {
     public static void main(String[] args) {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("symbols", "BNBUSDT,BTCUSDT");
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMargin().isolatedAccount(parameters);
         logger.info(result);
     }

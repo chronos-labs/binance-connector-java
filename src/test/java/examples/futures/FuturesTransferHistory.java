@@ -17,7 +17,7 @@ public final class FuturesTransferHistory {
         parameters.put("asset", "USDT");
         parameters.put("startTime", startTime);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createFutures().futuresTransferHistory(parameters);
         logger.info(result);
     }

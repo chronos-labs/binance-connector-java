@@ -18,7 +18,7 @@ public final class EnableIpRestriction {
         parameters.put("subAccountApiKey", "");
         parameters.put("ipRestrict", true);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().enableIpRestriction(parameters);
         logger.info(result);
     }

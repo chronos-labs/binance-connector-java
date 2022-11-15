@@ -15,7 +15,7 @@ public final class PurchaseQuota {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("productId", "TKO001");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSavings().purchaseQuotaFlexible(parameters);
         logger.info(result);
     }

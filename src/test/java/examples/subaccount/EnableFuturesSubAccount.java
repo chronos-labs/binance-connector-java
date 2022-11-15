@@ -15,7 +15,7 @@ public final class EnableFuturesSubAccount {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("email", "another_virtual@q6c1dsmxnoemail.com");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().enableFutures(parameters);
         logger.info(result);
     }

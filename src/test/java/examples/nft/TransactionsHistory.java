@@ -17,7 +17,7 @@ public final class TransactionsHistory {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("orderType", orderType);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createNFT().transactionsHistory(parameters);
         logger.info(result);
     }

@@ -11,8 +11,9 @@ public final class UserStream {
     }
 
     public static void main(String[] args) {
-        WebsocketClientImpl wsClient = new WebsocketClientImpl(DefaultUrls.TESTNET_WSS_URL);
-        SpotClientImpl spotClient = new SpotClientImpl(PrivateConfig.TESTNET_API_KEY, PrivateConfig.TESTNET_SECRET_KEY, DefaultUrls.TESTNET_URL);
+        WebsocketClientImpl wsClient = new WebsocketClientImpl(DefaultUrls.WS_URL);
+//        SpotClientImpl spotClient = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET, DefaultUrls.WS_URL);
+        SpotClientImpl spotClient = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         JSONObject obj = new JSONObject(spotClient.createUserData().createListenKey());
         String listenKey = obj.getString("listenKey");
         System.out.println("listenKey:" + listenKey);

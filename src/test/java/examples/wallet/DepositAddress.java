@@ -15,7 +15,7 @@ public final class DepositAddress {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("coin", "BNBUSDT");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createWallet().depositAddress(parameters);
         logger.info(result);
     }

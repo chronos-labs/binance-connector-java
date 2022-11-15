@@ -15,7 +15,7 @@ public final class CreateVirtualSubAccount {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("subAccountString", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().createVirtualSubAccount(parameters);
         logger.info(result);
     }

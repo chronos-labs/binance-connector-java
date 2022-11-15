@@ -19,7 +19,7 @@ public final class CrossMarginTransfer {
         parameters.put("amount", amount);
         parameters.put("type", type);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMargin().crossMarginTransfer(parameters);
         logger.info(result);
     }

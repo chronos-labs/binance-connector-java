@@ -16,7 +16,7 @@ public final class Verify {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("referenceNo", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createGiftCard().verify(parameters);
         logger.info(result);
     }

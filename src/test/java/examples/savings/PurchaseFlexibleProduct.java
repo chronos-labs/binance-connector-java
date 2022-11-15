@@ -17,7 +17,7 @@ public final class PurchaseFlexibleProduct {
         parameters.put("productId", "TKO001");
         parameters.put("amount", amount);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSavings().purchaseFlexibleProduct(parameters);
         logger.info(result);
     }

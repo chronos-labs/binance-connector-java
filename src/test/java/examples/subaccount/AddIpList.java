@@ -18,7 +18,7 @@ public final class AddIpList {
         parameters.put("subAccountApiKey", "");
         parameters.put("ipAddress", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().addIpList(parameters);
         logger.info(result);
     }

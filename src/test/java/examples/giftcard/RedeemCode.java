@@ -16,7 +16,7 @@ public final class RedeemCode {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("code", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createGiftCard().redeemCode(parameters);
         logger.info(result);
     }

@@ -16,7 +16,7 @@ public final class LoanIncome {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("asset", "BNB");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createCryptoLoans().loanIncome(parameters);
         logger.info(result);
     }

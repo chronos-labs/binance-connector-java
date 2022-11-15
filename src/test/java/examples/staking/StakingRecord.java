@@ -17,7 +17,7 @@ public final class StakingRecord {
         parameters.put("product", "STAKING");
         parameters.put("txnType", "SUBSCRIPTION");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createStaking().stakingRecord(parameters);
         logger.info(result);
     }

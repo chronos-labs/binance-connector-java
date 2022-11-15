@@ -19,7 +19,7 @@ public final class Quote {
         parameters.put("quoteQty", quoteQty);
 
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createBswap().quote(parameters);
         logger.info(result);
     }

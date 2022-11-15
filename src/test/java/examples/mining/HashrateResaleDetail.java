@@ -17,7 +17,7 @@ public final class HashrateResaleDetail {
         parameters.put("configId", configId);
         parameters.put("userName", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMining().hashrateResaleDetail(parameters);
         logger.info(result);
     }

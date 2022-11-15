@@ -12,7 +12,7 @@ public final class CreateIsolatedMarginListenKey {
 
     private static final Logger logger = LoggerFactory.getLogger(CreateIsolatedMarginListenKey.class);
     public static void main(String[] args) {
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("symbol", "BTCUSDT");
 

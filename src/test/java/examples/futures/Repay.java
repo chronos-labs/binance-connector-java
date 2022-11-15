@@ -18,7 +18,7 @@ public final class Repay {
         parameters.put("collateralCoin", "BUSD");
         parameters.put("amount", amount);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createFutures().repay(parameters);
         logger.info(result);
     }

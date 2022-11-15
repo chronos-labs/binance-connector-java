@@ -16,7 +16,7 @@ public final class FuturesAccountSummaryV2 {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("futuresType", futuresType);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().futuresAccountSummaryV2(parameters);
         logger.info(result);
     }

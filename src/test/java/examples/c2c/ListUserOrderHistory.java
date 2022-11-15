@@ -15,7 +15,7 @@ public final class ListUserOrderHistory {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("tradeType", "BUY");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createC2C().listUserOrderHistory(parameters);
         logger.info(result);
     }

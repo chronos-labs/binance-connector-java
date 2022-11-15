@@ -18,7 +18,7 @@ public final class Redeem {
         parameters.put("productId", "Bnb*21*WL");
         parameters.put("positionId", "1234");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createStaking().redeem(parameters);
         logger.info(result);
     }

@@ -21,7 +21,7 @@ public final class RemoveLiquidityPreview {
         parameters.put("shareAmount", shareAmount);
 
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createBswap().removeLiquidityPreview(parameters);
         logger.info(result);
     }

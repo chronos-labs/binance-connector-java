@@ -15,7 +15,7 @@ public final class Orders {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("transactionType", "0");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createFiat().orders(parameters);
         logger.info(result);
     }

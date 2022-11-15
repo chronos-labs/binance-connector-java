@@ -11,7 +11,7 @@ public final class AllPairs {
 
     private static final Logger logger = LoggerFactory.getLogger(AllPairs.class);
     public static void main(String[] args) {
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMargin().allPairs();
         logger.info(result);
     }

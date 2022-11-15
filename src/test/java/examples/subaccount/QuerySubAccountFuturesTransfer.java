@@ -17,7 +17,7 @@ public final class QuerySubAccountFuturesTransfer {
         parameters.put("email", "");
         parameters.put("futuresType", futuresType);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().getFuturesInternalTransfer(parameters);
         logger.info(result);
     }

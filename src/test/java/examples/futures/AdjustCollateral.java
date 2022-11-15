@@ -19,7 +19,7 @@ public final class AdjustCollateral {
         parameters.put("amount", amount);
         parameters.put("direction", "ADDITIONAL");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createFutures().adjustCollateral(parameters);
         logger.info(result);
     }

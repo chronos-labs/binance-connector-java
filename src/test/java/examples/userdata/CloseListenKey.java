@@ -15,7 +15,7 @@ public final class CloseListenKey {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("listenKey", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
 
         String result = client.createUserData().closeListenKey(parameters);
         logger.info(result);

@@ -20,7 +20,7 @@ public final class TradeFlow {
         parameters.put("startTime", startTime);
         parameters.put("endTime", endTime);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createConvert().tradeFlow(parameters);
         logger.info(result);
     }

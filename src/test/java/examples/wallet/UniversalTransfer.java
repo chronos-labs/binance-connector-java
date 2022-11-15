@@ -18,7 +18,7 @@ public final class UniversalTransfer {
         parameters.put("asset", "USDT");
         parameters.put("amount", amount);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createWallet().universalTransfer(parameters);
         logger.info(result);
     }

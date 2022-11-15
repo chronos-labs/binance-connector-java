@@ -15,7 +15,7 @@ public final class PurchaseRecord {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("lendingType", "DAILY");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSavings().purchaseRecord(parameters);
         logger.info(result);
     }

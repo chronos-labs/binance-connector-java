@@ -15,7 +15,7 @@ public final class ManagedSubDetails {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("email", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().managedSubDetails(parameters);
         logger.info(result);
     }

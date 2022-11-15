@@ -17,7 +17,7 @@ public final class Subscribe {
         parameters.put("tokenName", "BTCDOWN");
         parameters.put("cost", cost);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createBlvt().subscribe(parameters);
         logger.info(result);
     }

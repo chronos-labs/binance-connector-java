@@ -17,7 +17,7 @@ public final class Withdraw {
         parameters.put("address", "");
         parameters.put("amount", "0.001");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createWallet().withdraw(parameters);
         logger.info(result);
     }

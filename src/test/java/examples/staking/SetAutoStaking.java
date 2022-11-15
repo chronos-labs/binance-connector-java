@@ -18,7 +18,7 @@ public final class SetAutoStaking {
         parameters.put("positionId", "1234");
         parameters.put("renewable", "false");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createStaking().setAutoStaking(parameters);
         logger.info(result);
     }

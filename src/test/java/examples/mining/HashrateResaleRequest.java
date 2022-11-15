@@ -23,7 +23,7 @@ public final class HashrateResaleRequest {
         parameters.put("toPoolUser", "S19pro");
         parameters.put("hashRate", hashRate);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMining().hashrateResaleRequest(parameters);
         logger.info(result);
     }

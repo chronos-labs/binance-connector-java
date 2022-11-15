@@ -15,7 +15,7 @@ public final class QuerySubAccountAssets {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("email", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().assets(parameters);
         logger.info(result);
     }

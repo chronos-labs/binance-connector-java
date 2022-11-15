@@ -19,7 +19,7 @@ public final class Purchase {
         parameters.put("productId", "Bnb*21*WL");
         parameters.put("amount", amount);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createStaking().purchase(parameters);
         logger.info(result);
     }

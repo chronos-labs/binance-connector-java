@@ -15,7 +15,7 @@ public final class CollateralRepay {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("quoteId", "test");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createFutures().collateralRepay(parameters);
         logger.info(result);
     }

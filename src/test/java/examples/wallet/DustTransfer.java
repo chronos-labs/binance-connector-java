@@ -19,7 +19,7 @@ public final class DustTransfer {
         assets.add("CTSI");
         parameters.put("asset", assets);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createWallet().dustTransfer(parameters);
         logger.info(result);
     }

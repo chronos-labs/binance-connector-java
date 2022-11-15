@@ -16,7 +16,7 @@ public final class CrossMarginData {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("coin", "BNB");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMargin().crossMarginData(parameters);
         logger.info(result);
     }

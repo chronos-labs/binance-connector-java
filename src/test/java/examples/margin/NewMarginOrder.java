@@ -19,7 +19,7 @@ public final class NewMarginOrder {
         parameters.put("type", "MARKET");
         parameters.put("quantity", quantity);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMargin().newOrder(parameters);
         logger.info(result);
     }

@@ -18,7 +18,7 @@ public final class Borrow {
         parameters.put("amount", amount);
         parameters.put("collateralCoin", "BUSD");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createFutures().borrow(parameters);
         logger.info(result);
     }

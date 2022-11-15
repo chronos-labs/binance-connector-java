@@ -16,7 +16,7 @@ public final class CancelMarginOrder {
         parameters.put("symbol", "BNBUSDT");
         parameters.put("orderId", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMargin().cancelOrder(parameters);
         logger.info(result);
     }

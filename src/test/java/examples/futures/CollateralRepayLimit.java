@@ -16,7 +16,7 @@ public final class CollateralRepayLimit {
         parameters.put("coin", "USDT");
         parameters.put("collateralCoin", "BUSD");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createFutures().collateralRepayLimit(parameters);
         logger.info(result);
     }

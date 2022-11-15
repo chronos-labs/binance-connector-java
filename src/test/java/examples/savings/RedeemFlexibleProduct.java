@@ -18,7 +18,7 @@ public final class RedeemFlexibleProduct {
         parameters.put("amount", amount);
         parameters.put("type", "FAST");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSavings().redeemFlexibleProduct(parameters);
         logger.info(result);
     }

@@ -16,7 +16,7 @@ public final class EnableLeverageToken {
         parameters.put("email", "");
         parameters.put("enableBlvt", true);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().enableLeverageToken(parameters);
         logger.info(result);
     }

@@ -61,7 +61,7 @@ public final class BookTicker {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("symbols", symbols);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
 
         try {
             client.createMarket().tickerSymbol(parameters);
@@ -78,7 +78,7 @@ public final class BookTicker {
     public void snapshotOrderBook(List<String> symbols) throws IOException {
         String filePrefix = "orderBookSnapshot";
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
 
 
         for (String symbol : symbols) {

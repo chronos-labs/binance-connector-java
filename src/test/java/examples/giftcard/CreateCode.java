@@ -18,7 +18,7 @@ public final class CreateCode {
         parameters.put("token", "");
         parameters.put("amount", amount);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createGiftCard().createCode(parameters);
         logger.info(result);
     }

@@ -17,7 +17,7 @@ public final class SubAccountToMaster {
         parameters.put("asset", "USDT");
         parameters.put("amount", amount);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().subAccountToMaster(parameters);
         logger.info(result);
     }

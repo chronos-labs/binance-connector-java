@@ -17,7 +17,7 @@ public final class Redeem {
         parameters.put("tokenName", "BTCDOWN");
         parameters.put("amount", amount);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createBlvt().redeem(parameters);
         logger.info(result);
     }

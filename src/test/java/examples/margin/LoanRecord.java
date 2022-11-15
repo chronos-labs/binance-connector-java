@@ -15,7 +15,7 @@ public final class LoanRecord {
         LinkedHashMap<String, Object> parameters = new LinkedHashMap<>();
         parameters.put("asset", "USDT");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMargin().loanRecord(parameters);
         logger.info(result);
     }

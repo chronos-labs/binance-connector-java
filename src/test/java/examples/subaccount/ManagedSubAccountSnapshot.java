@@ -17,7 +17,7 @@ public final class ManagedSubAccountSnapshot {
         parameters.put("email", "");
         parameters.put("type", "SPOT");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().managedSubAccountSnapshot(parameters);
         logger.info(result);
     }

@@ -20,7 +20,7 @@ public final class SubAccountMarginTransfer {
         parameters.put("amount", amount);
         parameters.put("type", type);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSubAccount().marginTransfer(parameters);
         logger.info(result);
     }

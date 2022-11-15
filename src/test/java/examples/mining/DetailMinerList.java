@@ -17,7 +17,7 @@ public final class DetailMinerList {
         parameters.put("userName", "");
         parameters.put("workerName", "");
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createMining().detailMinerList(parameters);
         logger.info(result);
     }

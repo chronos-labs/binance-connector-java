@@ -17,7 +17,7 @@ public final class PurchaseProject {
         parameters.put("projectId", "TKO001");
         parameters.put("lot", lot);
 
-        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.SECRET_KEY);
+        SpotClientImpl client = new SpotClientImpl(PrivateConfig.API_KEY, PrivateConfig.API_SECRET);
         String result = client.createSavings().purchaseProject(parameters);
         logger.info(result);
     }
