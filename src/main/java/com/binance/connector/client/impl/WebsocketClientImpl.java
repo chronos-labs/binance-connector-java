@@ -36,7 +36,7 @@ public class WebsocketClientImpl implements WebsocketClient {
     private static final Logger logger = LoggerFactory.getLogger(WebsocketClientImpl.class);
 
     public WebsocketClientImpl() {
-        this.baseUrl = DefaultUrls.WS_URL;
+        this.baseUrl = DefaultUrls.TESTNET_WSS_URL;
     }
 
     public WebsocketClientImpl(String baseUrl) {
